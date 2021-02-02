@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Person Affiliations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th>Affiliation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person_affiliations.each do |person_affiliation| %>
+      <tr>
+        <td><%= person_affiliation.person_id %></td>
+        <td><%= person_affiliation.affiliation_id %></td>
+        <td><%= link_to 'Show', person_affiliation %></td>
+        <td><%= link_to 'Edit', edit_person_affiliation_path(person_affiliation) %></td>
+        <td><%= link_to 'Destroy', person_affiliation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person Affiliation', new_person_affiliation_path %>

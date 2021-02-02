@@ -1,0 +1,2 @@
+module PersonAffiliationsHelper
+end
